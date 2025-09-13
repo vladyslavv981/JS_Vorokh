@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Teoria JS - Vladyslav Vorokh</title>
+<script>
+function okno_zamknij_vorokh() {
+    window.close();
+}
+</script>
+</head>
+<body>
+
+<h1 style="font-size: 2cm;">Szkielet zaliczeniowy JavaScript Vladyslav Vorokh klasa 2W</h1>
+
+<h2>Pytania teoretyczne</h2>
+<ul>
+    <li>
+        <b>1) Kiedy powstał JavaScript (podaj datę).</b><br>
+        JavaScript został stworzony w grudniu 1995 roku.
+    </li>
+    <li>
+        <b>2) Dlaczego jest to język skryptowy?</b><br>
+        Jest to język skryptowy, ponieważ kod jest interpretowany na bieżąco przez przeglądarkę, a nie kompilowany do kodu maszynowego przed uruchomieniem.
+    </li>
+    <li>
+        <b>3) Gdzie jest wykonywany JS (klient lub serwer)?</b><br>
+        Głównie jest wykonywany po stronie klienta, czyli w przeglądarce internetowej.
+    </li>
+    <li>
+        <b>4) Dlaczego jest JS bezpiecznym narzędziem?</b><br>
+        JS jest bezpieczny, ponieważ działa w izolowanym środowisku zwanym "piaskownicą" (sandbox), co uniemożliwia mu bezpośredni dostęp do systemu plików użytkownika.
+    </li>
+    <li>
+        <b>5) Czy jest to język obiektowy, jeśli tak to dlaczego.</b><br>
+        Tak, jest to język obiektowy, ponieważ wszystko w nim, poza typami prostymi, jest traktowane jako obiekt.
+    </li>
+    <li>
+        <b>6) Wymień zalety JS:</b><br>
+        <ul>
+            <li>**Zaleta 1:** Zwiększa interaktywność stron internetowych.</li>
+            <li>**Zaleta 2:** Jest powszechnie wspierany przez wszystkie nowoczesne przeglądarki, co zapewnia jego uniwersalność.</li>
+            <li>**Zaleta 3:** Umożliwia tworzenie dynamicznych treści bez konieczności przeładowywania strony.</li>
+        </ul>
+    </li>
+    <li>
+        <b>7) Framework to:</b><br>
+        Framework to ustrukturyzowany zbiór narzędzi, bibliotek i reguł, który dostarcza gotowy "szkielet" do tworzenia aplikacji, ułatwiając i przyspieszając pracę.
+    </li>
+    <li>
+        <b>8) Do aplikacji mobilnych można użyć Framework</b><br>
+        Tak, można używać frameworków, np. React Native, Ionic czy Flutter, do tworzenia aplikacji mobilnych na różne platformy.
+    </li>
+    <li>
+        <b>9) Aplikacje responsywne to:</b><br>
+        Aplikacje responsywne to te, które automatycznie dostosowują swój wygląd i układ do rozmiaru ekranu urządzenia, na którym są wyświetlane.
+    </li>
+    <li>
+        <b>10) Przepisz linie kodu pod nimi wytłumaczenie jak działa ten fragment kodu</b><br>
+        `&lt;input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen('')"&gt;`<br>
+        Jest to przycisk, który po kliknięciu wywołuje funkcję JavaScript o nazwie `WinOpen('')`, która otwiera nową stronę.
+    </li>
+    <li>
+        <b>11) Przepisz linie kody pod nimi wytłumaczenie jak działa ta ten fragment kodu</b><br>
+        `window.open("obraz.html", "okienko", "toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");`<br>
+        Ta instrukcja otwiera nowe okno.
+        <ul>
+            <li>`toolbar=no` - ukrywa pasek narzędzi.</li>
+            <li>`directories=no` - ukrywa przyciski katalogów.</li>
+            <li>`menubar=no` - ukrywa pasek menu.</li>
+            <li>`height=280` - ustawia wysokość okna na 280 pikseli.</li>
+            <li>`width=160` - ustawia szerokość okna na 160 pikseli.</li>
+            <li>`top=200` - ustala odległość okna od górnej krawędzi ekranu.</li>
+            <li>`left=200` - ustala odległość okna od lewej krawędzi ekranu.</li>
+        </ul>
+    </li>
+    <li>
+        <b>12) Opisz następującą instrukcję window.close()</b><br>
+        Instrukcja ta służy do programowego zamknięcia bieżącego okna przeglądarki.
+    </li>
+</ul>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_vorokh()"/>
+
+</body>
+</html>
