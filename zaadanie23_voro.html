@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<meta charset="utf-8">
+<div style="color:blue; font-size:26px;">
+<script language="JavaScript">
+// Vladyslav Vorokh Zadanie 23
+var D_vor = prompt("Podaj wysokość oparcia D (m):", "");
+var X_vor = prompt("Podaj odległość podstawy X (m):", "");
+var D = parseFloat(D_vor);
+var X = parseFloat(X_vor);
+function dlugosc_vorokh(D_vor, X_vor) {
+return Math.sqrt(D_vor*D_vor + X_vor*X_vor);
+}
+function kat_vorokh(D_vor, X_vor) {
+var rad = Math.atan(D_vor / X_vor);
+var deg = rad * (180 / Math.PI);
+return deg;
+}
+var dl = dlugosc_vorokh(D, X);
+var kat = kat_vorokh(D, X);
+document.write("Długość drabiny = " + dl.toFixed(2) + " m<br>");
+document.write("Kąt nachylenia = " + kat.toFixed(2) + " stopni");
+function okno_zamknij_vorokh() {
+window.close();
+}
+</script>
+</div>
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_vorokh()"/>
+</body>
+</html>
