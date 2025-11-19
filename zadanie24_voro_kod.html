@@ -1,0 +1,45 @@
+<html> 
+   <head>
+<meta charset="utf-8">
+</head>
+   <body> 
+     <textarea cols="90" rows="24"> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<meta charset="utf-8">
+<div style="color:purple; font-size:20px;">
+<script language="JavaScript">
+// Vladyslav Vorokh  Zadanie 24
+var x1_vor = prompt("Podaj x1:", "");
+var x2_vor = prompt("Podaj x2:", "");
+var x1 = parseFloat(x1_vor);
+var x2 = parseFloat(x2_vor);
+document.write("wczytane liczby: x1=" + x1 + "&nbsp&nbsp&nbsp&nbsp&nbsp x2=" + x2 + "<br><br>");
+var y1 = Math.pow(x1, x2);
+var y2 = Math.sqrt(x1);
+var y3 = Math.abs(x1 - x2);
+document.write("y1 = " + y1.toFixed(2) + "<br>");
+document.write("y2 = " + y2.toFixed(2) + "<br>");
+document.write("y3 = " + y3.toFixed(2) + "<br><br>");
+var rad = (x1 * Math.PI) / 180;
+document.write("w stopniach x1=" + x1 + " [stopniach] &nbsp&nbsp x1=" + rad.toFixed(2) + " [radianach]<br><br>");
+var s = Math.sin(rad);
+var c = Math.cos(rad);
+var t = Math.tan(rad);
+document.write("sin(x1) = " + s.toFixed(2) + "<br>");
+document.write("cos(x1) = " + c.toFixed(2) + "<br>");
+document.write("tan(x1) = " + t.toFixed(2) + "<br>");
+function okno_zamknij_vorokh() { window.close(); }
+</script>
+</div>
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_vorokh()"/>
+</body>
+</html>
+
+</textarea> 
+    </body> 
+</html> 
