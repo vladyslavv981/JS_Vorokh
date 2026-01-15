@@ -1,0 +1,170 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 29 – Obiekty w JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 32px;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 26px;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Zadanie 29<br>Obiekty w JavaScript</h1>
+<h2>Autor: Vladyslav Vorokh</h2>
+
+<h2>Pytania</h2>
+
+<h3>1. W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)?</h3>
+
+<h3>2. W jaki sposób można odwołać się do pól (właściwości) i metod?</h3>
+
+<h3>3. Wymień cechy charakterystyczne konstruktora.</h3>
+
+<h3>4. Konstruowanie obiektu – obiekt ma trzy pola oraz jedną metodę.</h3>
+
+<h3>5. Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h3>
+
+<h3>6. Konstruktor w JS na podstawie przykładu wraz z opisem.</h3>
+
+<h3>7. Znaczenie słowa kluczowego new wraz z przykładem.</h3>
+
+<h3>8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem.</h3>
+
+<h2>Odpowiedzi</h2>
+
+<h3>1. Określanie właściwości obiektu</h3>
+
+<p><b>Sposób 1 – notacja kropkowa:</b></p>
+<pre><code>
+auto.marka = "Ferrari";
+auto.rok = 2003;
+auto.cena = 200000;
+</code></pre>
+
+<p><b>Sposób 2 – notacja tablicowa:</b></p>
+<pre><code>
+auto["cena"] = 200000;
+</code></pre>
+
+<h3>2. Odwoływanie się do pól i metod</h3>
+<p>
+Do właściwości i metod odwołujemy się przez nazwę obiektu oraz kropkę.
+</p>
+<pre><code>
+console.log(auto.marka);
+auto.jedz();
+</code></pre>
+
+<h3>3. Cechy charakterystyczne konstruktora</h3>
+<ul>
+    <li>Jest wywoływany automatycznie podczas tworzenia obiektu</li>
+    <li>Nazywa się tak samo jak klasa</li>
+    <li>Nie zwraca żadnej wartości</li>
+    <li>Może przyjmować argumenty</li>
+    <li>Do jego wywołania używa się słowa kluczowego <b>new</b></li>
+</ul>
+
+<h3>4. Konstruowanie obiektu – przykład</h3>
+<pre><code>
+var osoba = {
+    nazwisko: 'Vorokh',
+    imie: 'Vladyslav',
+    zawod: 'programista',
+    wyswietl: function() {
+        document.write(this.imie + ' ' + this.nazwisko);
+    }
+}
+</code></pre>
+
+<h3>5. Znaczenie słowa this</h3>
+<p>
+Słowo kluczowe <b>this</b> pozwala odwołać się do pól i metod obiektu z jego wnętrza.
+</p>
+<p>
+Pola i metody w obiekcie oddzielamy <b>przecinkami</b>.
+</p>
+
+<h3>6. Konstruktor w JavaScript</h3>
+<pre><code>
+function Osoba(imie, nazwisko, zawod) {
+    this.imie = imie;
+    this.nazwisko = nazwisko;
+    this.zawod = zawod;
+    this.wypisz = function() {
+        alert(this.imie + ' ' + this.nazwisko);
+    }
+}
+</code></pre>
+
+<p>
+Funkcja pełni rolę klasy, a słowo <b>this</b> wskazuje na aktualnie tworzony obiekt.
+</p>
+
+<h3>7. Słowo kluczowe new</h3>
+<p>
+Słowo <b>new</b> służy do tworzenia nowego obiektu na podstawie konstruktora.
+</p>
+<pre><code>
+var osoba1 = new Osoba('Vladyslav', 'Vorokh', 'uczen');
+var osoba2 = new Osoba('Anna', 'Nowak', 'sekretarka');
+</code></pre>
+
+<h3>8. Właściwość prototype</h3>
+<p>
+<b>Prototype umożliwia dodawanie wspólnych metod i właściwości dla wszystkich obiektów
+utworzonych na podstawie danego konstruktora.</b>
+</p>
+
+<pre><code>
+function Klient() {
+    this.imie = 'Vladyslav';
+    this.nazwisko = 'Vorokh';
+}
+
+Klient.prototype.zawod = 'programista';
+
+Klient.prototype.pisz_dane = function() {
+    document.write(this.imie + ' ' + this.nazwisko + ' - ' + this.zawod);
+}
+
+var osoba = new Klient();
+osoba.pisz_dane();
+</code></pre>
+
+<p>
+Po użyciu <b>prototype</b> każdy nowy obiekt utworzony z konstruktora Klient
+dziedziczy dodane metody i właściwości.
+</p>
+
+</body>
+     </html> 
+      </textarea> 
+    </body> 
+</html> 
