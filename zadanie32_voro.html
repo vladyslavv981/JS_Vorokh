@@ -48,26 +48,22 @@ function pokazZadanie() {
 
 function pokazKod() {
     document.getElementById("wynik").innerText =
-`function Monitor(producent, przekatna, rozdzielczosc, typ) {
-    this.producent = producent;
-    this.przekatna = przekatna;
-    this.rozdzielczosc = rozdzielczosc;
-    this.typ = typ;
-}
-
-Monitor.prototype.wyswietl = function () {
-    return this.producent;
-};
-
-var monitor1 = new Monitor("Samsung", "27 cali", "1920x1080", "LED");
-var monitor2 = new Monitor("LG", "24 cale", "2560x1440", "IPS");
-var monitor3 = new Monitor("Dell", "32 cale", "3840x2160", "VA");
-
-Monitor.prototype.cena = 1500;
-
-Monitor.prototype.Monitor_pokaz_Vorokh = function () {
-    return this.cena;
-};`;
+"function Monitor(producent, przekatna, rozdzielczosc, typ) {\n" +
+"    this.producent = producent;\n" +
+"    this.przekatna = przekatna;\n" +
+"    this.rozdzielczosc = rozdzielczosc;\n" +
+"    this.typ = typ;\n" +
+"}\n\n" +
+"Monitor.prototype.wyswietl = function () {\n" +
+"    return this.producent;\n" +
+"};\n\n" +
+"var monitor1 = new Monitor(\"Samsung\", \"27 cali\", \"1920x1080\", \"LED\");\n" +
+"var monitor2 = new Monitor(\"LG\", \"24 cale\", \"2560x1440\", \"IPS\");\n" +
+"var monitor3 = new Monitor(\"Dell\", \"32 cale\", \"3840x2160\", \"VA\");\n\n" +
+"Monitor.prototype.cena = 1500;\n\n" +
+"Monitor.prototype.Monitor_pokaz_Vorokh = function () {\n" +
+"    return this.cena;\n" +
+"};";
 }
 
 </script>
