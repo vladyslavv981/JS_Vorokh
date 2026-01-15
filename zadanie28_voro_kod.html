@@ -9,8 +9,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 40px;
+            line-height: 1.6;
         }
         h1 {
             font-size: 40px;
@@ -35,15 +35,15 @@
 <body>
 
 <h1>Zadanie 28<br>Paradygmaty programowania</h1>
+<h2>Autor: Vladyslav Vorokh</h2>
 
-<!-- PYTANIA -->
 <h2>Pytania</h2>
 
 <h3>1. Rodzaje „filozofii” programowania.</h3>
 
 <h3>2. Opisz paradygmat programowania strukturalnego. Założenia programowania strukturalnego.</h3>
 
-<h3>3. Programowanie obiektowe: definicja (angielski skrót, obiekty, stan, zachowanie, końcowa konkluzja).</h3>
+<h3>3. Programowanie obiektowe – definicja (angielski skrót, obiekty, stan, zachowanie, konkluzja).</h3>
 
 <h3>4. Dlaczego stosujemy programowanie obiektowe?</h3>
 
@@ -59,13 +59,9 @@
     <li>Polimorfizm</li>
 </ul>
 
-<!-- ODPOWIEDZI -->
 <h2>Odpowiedzi</h2>
 
 <h3>1. Rodzaje „filozofii” (paradygmatów) programowania</h3>
-<p>
-Wyróżniamy następujące paradygmaty programowania:
-</p>
 <ul>
     <li>Programowanie strukturalne</li>
     <li>Programowanie obiektowe</li>
@@ -73,76 +69,68 @@ Wyróżniamy następujące paradygmaty programowania:
 
 <h3>2. Programowanie strukturalne</h3>
 <p>
-Programowanie strukturalne to paradygmat programowania opierający się na podziale kodu źródłowego
-programu na procedury i hierarchicznie ułożone bloki z wykorzystaniem struktur kontrolnych,
-takich jak instrukcje warunkowe oraz pętle.
+Programowanie strukturalne to paradygmat programowania opierający się na podziale kodu
+źródłowego na procedury oraz hierarchicznie ułożone bloki z wykorzystaniem instrukcji
+warunkowych i pętli.
 </p>
 <p>
-Zwiększa ono czytelność kodu i ułatwia jego analizę, co stanowi poprawę w stosunku do trudnego
-w utrzymaniu tzw. „spaghetti code”, często wynikającego z używania instrukcji <b>goto</b>.
+Zwiększa czytelność kodu i ułatwia jego analizę, eliminując tzw. „spaghetti code”,
+które często powstaje przy użyciu instrukcji <b>goto</b>.
 </p>
 
 <h3>Założenia programowania strukturalnego</h3>
 <ul>
-    <li>Podzielone bloki kodu mają jeden punkt wejścia</li>
-    <li>Wykonywanie wyrażeń w określonej kolejności</li>
-    <li>Używanie instrukcji warunkowych (if, if else)</li>
-    <li>Używanie pętli (for, while, do while)</li>
+    <li>Jeden punkt wejścia do bloku kodu</li>
+    <li>Wykonywanie instrukcji w określonej kolejności</li>
+    <li>Stosowanie instrukcji warunkowych (if, if else)</li>
+    <li>Stosowanie pętli (for, while, do while)</li>
     <li>Unikanie instrukcji skoku (goto)</li>
-    <li>Unikanie instrukcji break i continue</li>
-    <li>Funkcje i zmienne nie są ze sobą bezpośrednio powiązane</li>
+    <li>Unikanie break i continue</li>
+    <li>Brak powiązania danych z funkcjami</li>
 </ul>
 
-<h3>3. Programowanie obiektowe – definicja</h3>
+<h3>3. Programowanie obiektowe</h3>
 <p>
-Programowanie obiektowe (ang. <b>Object-Oriented Programming – OOP</b>) to sposób programowania,
-w którym program jest zbiorem obiektów komunikujących się ze sobą.
-</p>
-<p>
-Obiekty:
+Programowanie obiektowe (ang. <b>Object-Oriented Programming – OOP</b>) to sposób
+programowania, w którym program składa się z obiektów.
 </p>
 <ul>
-    <li>posiadają <b>stan</b> (dane, pola)</li>
-    <li>wykazują <b>zachowanie</b> (metody)</li>
+    <li>Obiekty mają <b>stan</b> (pola, dane)</li>
+    <li>Obiekty mają <b>zachowanie</b> (metody)</li>
 </ul>
 <p>
-Obiekty tworzone są na podstawie wcześniej zdefiniowanych klas i istnieją w pamięci komputera
-jako elementy wirtualnej rzeczywistości.
-</p>
-<p>
-<b>Konkluzja:</b> Programowanie obiektowe polega na modelowaniu rzeczywistości za pomocą obiektów,
-które mają swoje cechy i zachowania.
+Program komputerowy jest zbiorem obiektów komunikujących się ze sobą w celu realizacji zadań.
 </p>
 
 <h3>4. Dlaczego stosujemy programowanie obiektowe?</h3>
 <ul>
-    <li>Jest bardziej naturalne i zgodne z otaczającą nas rzeczywistością</li>
-    <li>Ułatwia zarządzanie pamięcią – obiekty można usuwać</li>
-    <li>Pozwala na ponowne użycie klas</li>
+    <li>Jest zgodne z rzeczywistym światem</li>
+    <li>Ułatwia zarządzanie pamięcią</li>
+    <li>Pozwala na ponowne wykorzystanie kodu</li>
     <li>Ułatwia pracę zespołową</li>
-    <li>Skraca czas tworzenia programów i obniża koszty</li>
+    <li>Skraca czas tworzenia programów</li>
 </ul>
 
 <h3>5. Pojęcia programowania obiektowego</h3>
 
-<p><b>Klasa</b> – foremka opisująca, jak będą wyglądały tworzone obiekty. Zawiera pola i metody.</p>
+<p><b>Klasa</b> – opis obiektu zawierający jego pola i metody.</p>
 
-<p><b>Obiekt</b> – instancja klasy, byt powstały na jej podstawie, posiadający właściwości i metody.</p>
+<p><b>Obiekt</b> – instancja klasy, byt utworzony na jej podstawie.</p>
 
 <p><b>Właściwość</b> – cecha obiektu, np. kolor, wiek.</p>
 
-<p><b>Metoda</b> – czynność, którą obiekt potrafi wykonać, np. poruszanie się.</p>
+<p><b>Metoda</b> – czynność wykonywana przez obiekt.</p>
 
-<p><b>Konstruktor</b> – metoda wywoływana podczas tworzenia obiektu, inicjalizuje jego dane.</p>
+<p><b>Konstruktor</b> – metoda wywoływana podczas tworzenia obiektu.</p>
 
-<p><b>Dziedziczenie</b> – możliwość przejmowania właściwości i metod z innej klasy.</p>
+<p><b>Dziedziczenie</b> – przejmowanie cech innej klasy.</p>
 
-<p><b>Hermetyzacja (enkapsulacja)</b> – ukrywanie części danych i metod przed światem zewnętrznym.</p>
+<p><b>Hermetyzacja</b> – ukrywanie danych przed dostępem z zewnątrz.</p>
 
-<p><b>Polimorfizm</b> – zdolność obiektu do zmiany zachowania w zależności od sposobu użycia.</p>
+<p><b>Polimorfizm</b> – możliwość różnego zachowania obiektu.</p>
 
 </body>
-     </html> 
+     </html>
       </textarea> 
     </body> 
 </html> 
