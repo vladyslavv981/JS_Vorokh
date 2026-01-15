@@ -1,0 +1,63 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+      <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 31</title>
+
+    <script type="text/javascript">
+        var Monitor = {
+            producent: "Samsung",
+            przekatna: "27 cali",
+            rozdzielczosc: "1920x1080",
+
+            Monitor_wyswietl_Vorokh: function () {
+                document.write("<b>Nazwa obiektu:</b> Monitor<br><br>");
+
+                document.write("<b>Pola (właściwości):</b><br>");
+                document.write("producent: " + this.producent + "<br>");
+                document.write("przekątna: " + this.przekatna + "<br>");
+                document.write("rozdzielczość: " + this.rozdzielczosc + "<br><br>");
+
+                document.write("<b>Nazwa metody:</b> Monitor_wyswietl_Vorokh<br><br>");
+            }
+        };
+
+        Monitor.Monitor_wyswietl_Vorokh();
+
+        Monitor.cena = 1200;
+
+        Monitor.Monitor_pokaz_Vorokh = function () {
+            document.write("<b>Nowe pole poza ciałem obiektu:</b> cena = " + this.cena + " zł<br>");
+            document.write("<b>Nowa metoda poza ciałem obiektu:</b> Monitor_pokaz_Vorokh<br>");
+        };
+        Monitor.Monitor_pokaz_Vorokh();
+
+    </script>
+</head>
+
+<body>
+    <br><br>
+    <b>Programowanie obiektowe</b><br><br>
+
+    Obiekt: Monitor<br><br>
+
+    Pola:<br>
+    - producent<br>
+    - przekątna<br>
+    - rozdzielczość<br><br>
+
+    Metoda (w obiekcie): Monitor_wyswietl_Vorokh<br><br>
+
+    Nowe pole (poza obiektem): cena<br>
+    Nowa metoda (poza obiektem): Monitor_pokaz_Vorokh<br><br>
+
+    Autor: Vladyslav Vorokh<br>
+    Nr w dzienniku: 25
+</body>
+     </html>
+      </textarea> 
+    </body> 
+</html> 
