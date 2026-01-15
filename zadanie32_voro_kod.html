@@ -1,0 +1,79 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+      <!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 32</title>
+
+<style>
+body { font-family: Arial; margin: 40px; }
+button { padding: 10px 20px; margin: 5px; font-size: 16px; }
+.box { margin-top: 20px; padding: 15px; border: 1px solid black; }
+</style>
+
+<script type="text/javascript">
+
+function Monitor(producent, przekatna, rozdzielczosc, typ) {
+    this.producent = producent;
+    this.przekatna = przekatna;
+    this.rozdzielczosc = rozdzielczosc;
+    this.typ = typ;
+}
+
+Monitor.prototype.wyswietl = function () {
+    return "Producent: " + this.producent + "<br>" +
+           "Przekątna: " + this.przekatna + "<br>" +
+           "Rozdzielczość: " + this.rozdzielczosc + "<br>" +
+           "Typ: " + this.typ + "<br><br>";
+};
+
+var monitor1 = new Monitor("Samsung", "27 cali", "1920x1080", "LED");
+var monitor2 = new Monitor("LG", "24 cale", "2560x1440", "IPS");
+var monitor3 = new Monitor("Dell", "32 cale", "3840x2160", "VA");
+
+Monitor.prototype.cena = 1500;
+
+Monitor.prototype.Monitor_pokaz_Vorokh = function () {
+    return "Cena: " + this.cena + " zł<br><br>";
+};
+
+function pokazZadanie() {
+    document.getElementById("wynik").innerHTML =
+        "Obiekt: Monitor<br><br>" +
+        monitor1.wyswietl() + monitor1.Monitor_pokaz_Vorokh() +
+        monitor2.wyswietl() + monitor2.Monitor_pokaz_Vorokh() +
+        monitor3.wyswietl() + monitor3.Monitor_pokaz_Vorokh() +
+        "Autor: Vladyslav Vorokh<br>" +
+        "Nr w dzienniku: 25";
+}
+
+function pokazKod() {
+    document.getElementById("wynik").innerText =
+"function Monitor(producent, przekatna, rozdzielczosc, typ) {\n" +
+" this.producent = producent;\n this.przekatna = przekatna;\n this.rozdzielczosc = rozdzielczosc;\n this.typ = typ;\n}\n\n" +
+"Monitor.prototype.wyswietl = function () { };\n" +
+"Monitor.prototype.cena = 1500;\n" +
+"Monitor.prototype.Monitor_pokaz_Vorokh = function () { };";
+}
+
+</script>
+</head>
+
+<body>
+
+<h2>Zadanie 32 – Programowanie obiektowe</h2>
+
+<button onclick="pokazZadanie()">ZADANIE</button>
+<button onclick="pokAZKod()">KOD</button>
+
+<div id="wynik" class="box">
+Kliknij przycisk.
+</div>
+
+</body>
+</html>
+      </textarea> 
+    </body> 
+</html> 
