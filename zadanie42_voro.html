@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vorokh Z42</title>
+</head>
+<body>
+<h2>Zadanie 42</h2>
+<script>
+var imie_vor = prompt("Podaj imię:");
+var dl_vor = imie_vor.length;
+
+document.write("Długość imienia: " + dl_vor + "<br><br>");
+
+var nazwisko_vor = prompt("Podaj nazwisko:");
+var liczba_vor = nazwisko_vor.length + 20;
+
+if (liczba_vor > 10 && liczba_vor <= 50) {
+    document.write("Liczba należy do przedziału (10;50]<br>");
+} else {
+    document.write("Liczba NIE należy do przedziału<br>");
+}
+
+var dzien_vor = prompt("Podaj dzień urodzenia:");
+var x_vor = parseInt(dzien_vor) + 50;
+
+if (x_vor < 100 || x_vor >= 200) {
+    document.write("Liczba należy do (-∞,100) lub [200,+∞)");
+} else {
+    document.write("Liczba NIE należy do tych przedziałów");
+}
+
+</script>
+
+</body>
+</html>
