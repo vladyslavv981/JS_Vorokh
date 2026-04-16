@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vorokh Z38_kod</title>
+</head>
+<body>
+<textarea cols="80" rows="10">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vorokh Z40</title>
+</head>
+
+<body>
+
+<h2>Zadanie 40</h2>
+
+Podaj a: <input id="a_vor"><br><br>
+Podaj b: <input id="b_vor"><br><br>
+
+<button onclick="suma_vor()">Suma</button>
+<button onclick="roznica_vor()">Różnica</button>
+<button onclick="iloczyn_vor()">Iloczyn</button>
+<button onclick="iloraz_vor()">Iloraz</button>
+
+<p id="wynik_vor"></p>
+
+<script>
+function suma_vor() {
+    var a = parseFloat(document.getElementById("a_vor").value);
+    var b = parseFloat(document.getElementById("b_vor").value);
+    document.getElementById("wynik_vor").innerHTML = "Suma: " + (a + b);
+}
+
+function roznica_luk() {
+    var a = parseFloat(document.getElementById("a_luk").value);
+    var b = parseFloat(document.getElementById("b_luk").value);
+    document.getElementById("wynik_luk").innerHTML = "Różnica: " + (a - b);
+}
+
+function iloczyn_luk() {
+    var a = parseFloat(document.getElementById("a_luk").value);
+    var b = parseFloat(document.getElementById("b_luk").value);
+    document.getElementById("wynik_luk").innerHTML = "Iloczyn: " + (a * b);
+}
+
+function iloraz_luk() {
+    var a = parseFloat(document.getElementById("a_luk").value);
+    var b = parseFloat(document.getElementById("b_luk").value);
+
+    if (b == 0) {
+        document.getElementById("wynik_luk").innerHTML = "Nie wolno dzielić przez zero";
+    } else {
+        document.getElementById("wynik_luk").innerHTML = "Iloraz: " + (a / b);
+
+    }
+}
+</script>
+</body>
+</html>
+</textarea>
+</body>
+</html>
