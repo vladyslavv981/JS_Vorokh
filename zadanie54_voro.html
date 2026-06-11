@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 54</title>
+</head>
+<body>
+<script>
+var a_vor = 7;
+var b_vor = 23;
+for (var i_vor = 1; i_vor <= b_vor; i_vor++)
+{
+    document.write("*");
+}
+document.write("<br>");
+for (var i_vor = 1; i_vor <= a_vor - 2; i_vor++)
+{
+    document.write("*");
+
+    for (var j_vor = 1; j_vor <= b_vor - 2; j_vor++)
+    {
+        document.write("&nbsp;");
+    }
+    document.write("*<br>");
+}
+for (var i_vor = 1; i_vor <= b_vor; i_vor++)
+{
+    document.write("*");
+}
+</script>
+</body>
+</html>
