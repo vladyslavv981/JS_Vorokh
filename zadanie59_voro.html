@@ -1,34 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Zadanie 59</title>
+<title>Pierwiastki</title>
 </head>
 <body>
 
-<div id="wynik"></div>
+<pre id="wynik"></pre>
+<button id="dalej" style="display:none;">Dalej</button>
 
 <script>
-var nr = 25;
-var licznik = 0;
-var output = "";
+let start = 25;
+let end = start + 15;
+let licznik = 0;
+let i = start;
 
-for (var i = nr; i <= nr + 15; i++) {
-    var pierw2 = Math.sqrt(i);
-    var pierw4 = Math.sqrt(pierw2);
+function drukuj() {
+    let wynik = document.getElementById("wynik");
 
-    output += "I=" + i + 
-              " pierw_2(" + i + ")=" + pierw2.toFixed(2) + 
-              " pierw_4(" + i + ")=" + pierw4.toFixed(2) + "<br>";
+    for (; i <= end; i++) {
+        let pierw2 = Math.sqrt(i);
+        let pierw4 = Math.sqrt(pierw2);
 
-    licznik++;
+        wynik.textContent += 
+            "I=" + i +
+            " pierw_2(" + i + ")=" + pierw2.toFixed(2) +
+            " pierw_4(" + i + ")=" + pierw4.toFixed(2) + "\n";
 
-    if (licznik % 3 === 0) {
-        output += "-----<br>";
+        licznik++;
+
+        if (licznik === 3) {
+            licznik = 0;
+            i++; 
+            document.getElementById("dalej").style.display = "inline";
+            return;
+        }
     }
 }
 
-document.getElementById("wynik").innerHTML = output;
+document.getElementById("dalej").onclick = function() {
+    this.style.display = "none";
+    drukuj();
+};
+
+drukuj();
 </script>
 
 </body>
