@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 53</title>
+</head>
+<body>
+<script>
+var liczba_vor = parseInt(prompt("Ile razy powtórzyć?"));
+var inicjaly_vor = prompt("Podaj Twoje inicjały");
+
+for (var i_vor = 1; i_vor <= liczba_vor; i_vor++)
+{
+    for (var j_vor = 1; j_vor < i_vor; j_vor++)
+    {
+        document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+    }
+
+    document.write(i_vor + "_" + inicjaly_vor + "_" + i_vor + "<br>");
+}
+
+</script>
+</body>
+</html>
