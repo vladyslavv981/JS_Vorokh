@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 59</title>
+</head>
+<body>
+<script>
+var nr = 25;
+
+var licznik = 0;
+
+for (var i = nr; i <= nr + 15; i++) {
+    var pierw2 = Math.sqrt(i);
+    var pierw4 = Math.sqrt(pierw2);
+
+    document.write("I=" + i + " pierw_2(" + i + ")=" + pierw2.toFixed(2) + " pierw_4(" + i + ")=" + pierw4.toFixed(2) + "<br>");
+
+    licznik++;
+
+    if (licznik % 3 == 0) {
+        document.write("-----<br>");
+    }
+}
+</script>
+</body>
+</html>
