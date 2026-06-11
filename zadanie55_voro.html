@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Zadanie 55</title>
 </head>
 <body>
+
 <script>
+var a_vor = parseInt(prompt("Podaj a (wysokość):"));
+var b_vor = parseInt(prompt("Podaj b (szerokość):"));
 
-let a_vor = 6;
-let b_vor = 20;
-
-for (let i = 1; i <= b_vor; i++) {
+for (var i = 1; i <= b_vor; i++) {
     document.write("*");
 }
 document.write("<br>");
 
-let wiersz_vor = "*";
+var wiersz_vor = "*";
+for (var i = 1; i <= (b_vor - 2); i++) {
+    wiersz_vor = wiersz_vor + "&nbsp&nbsp";
+}
+wiersz_vor = wiersz_vor + "*";
 
-for (let i = 1; i <= (b_vor - 2); i++) {
-    wiersz_vor += " ";
+for (var i = 1; i <= (a_vor - 2); i++) {
+    document.write(wiersz_vor);
+    document.write("<br>");
 }
 
-wiersz_vor += "*";
-
-for (let i = 1; i <= (a_vor - 2); i++) {
-    document.write(wiersz_vor + "<br>");
-}
-
-for (let i = 1; i <= b_vor; i++) {
+for (var i = 1; i <= b_vor; i++) {
     document.write("*");
 }
-
+document.write("<br>");
 </script>
+
 </body>
 </html>
