@@ -4,31 +4,32 @@
     <meta charset="UTF-8">
     <title>Zadanie 56</title>
 </head>
-<body>
+<body style="font-family: monospace;">
+<pre>
 <script>
 var imie = prompt("Podaj imię:");
 var nazwisko = prompt("Podaj nazwisko:");
-
 var a = (nazwisko.length % 4) + 5;
 var b = (imie.length % 6) + 20;
-
 for (var i = 0; i < b; i++) {
     document.write("*");
 }
-document.write("<br>");
+document.write("\n");
+
 var wiersz = "*";
-for (var i = 1; i < (b - 2); i++) {
-    wiersz = wiersz + "&nbsp;&nbsp;";
+for (var i = 1; i < b - 1; i++) {
+    wiersz = wiersz + " ";
 }
-wiersz = wiersz + "*";
-for (var i = 0; i < (a - 2); i++) {
-    document.write(wiersz);
-    document.write("<br>");
+wiersz = wiersz.substring(0, b - 1) + "*";
+
+for (var i = 0; i < a - 2; i++) {
+    document.write(wiersz + "\n");
 }
+
 for (var i = 0; i < b; i++) {
     document.write("*");
 }
 </script>
-
+</pre>
 </body>
 </html>
