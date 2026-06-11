@@ -1,49 +1,28 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<title>Pierwiastki</title>
+    <meta charset="UTF-8">
+    <title>Zadanie 59</title>
 </head>
 <body>
 
 <pre id="wynik"></pre>
-<button id="dalej" style="display:none;">Dalej</button>
 
 <script>
 let start = 25;
-let end = start + 15;
-let licznik = 0;
-let i = start;
+let end = 59;
 
-function drukuj() {
-    let wynik = document.getElementById("wynik");
+let wynik = document.getElementById("wynik");
 
-    for (; i <= end; i++) {
-        let pierw2 = Math.sqrt(i);
-        let pierw4 = Math.sqrt(pierw2);
+for (let i = start; i <= end; i++) {
+    let pierw2 = Math.sqrt(i);
+    let pierw4 = Math.sqrt(pierw2);
 
-        wynik.textContent += 
-            "I=" + i +
-            " pierw_2(" + i + ")=" + pierw2.toFixed(2) +
-            " pierw_4(" + i + ")=" + pierw4.toFixed(2) + "\n";
-
-        licznik++;
-
-        if (licznik === 3) {
-            licznik = 0;
-            i++; 
-            document.getElementById("dalej").style.display = "inline";
-            return;
-        }
-    }
+    wynik.textContent +=
+        "I=" + i +
+        " pierw_2(" + i + ")=" + pierw2.toFixed(2) +
+        " pierw_4(" + i + ")=" + pierw4.toFixed(2) + "\n";
 }
-
-document.getElementById("dalej").onclick = function() {
-    this.style.display = "none";
-    drukuj();
-};
-
-drukuj();
 </script>
 
 </body>
