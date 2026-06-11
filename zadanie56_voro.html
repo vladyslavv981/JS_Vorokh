@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>Zadanie 56</title>
 </head>
 <body>
-<pre>
+
 <script>
-var i_vor = "Vladyslav";
-var b_vor = "Vorokh";
+var imie = prompt("Podaj imię:");
+var nazwisko = prompt("Podaj nazwisko:");
 
-var a = b_vor.length % 4 + 5;
-var b = i_vor.length % 5 + 20;
+var a_vor = (nazwisko.length % 4) + 5;
+var b_vor = (imie.length % 6) + 20;
 
-for (var i = 1; i <= b; i++)
-{
+for (var i = 1; i <= b_vor; i++) {
     document.write("*");
 }
-document.write("\n");
+document.write("<br>");
 
-for (var w = 1; w <= a - 2; w++)
-{
+for (var i = 1; i <= (a_vor - 2); i++) {
     document.write("*");
-
-    for (var j = 1; j <= b - 2; j++)
-    {
-        document.write(" ");
+    for (var j = 1; j <= (b_vor - 2); j++) {
+        document.write("&nbsp&nbsp");
     }
-    document.write("*\n");
+    document.write("*<br>");
 }
 
-for (var i = 1; i <= b; i++)
-{
+for (var i = 1; i <= b_vor; i++) {
     document.write("*");
 }
+document.write("<br>");
 </script>
-</pre>
+
 </body>
 </html>
