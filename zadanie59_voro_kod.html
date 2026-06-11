@@ -4,7 +4,7 @@
 </head>
    <body> 
      <textarea cols="90" rows="24"> 
-       <!DOCTYPE html>
+      <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -12,23 +12,29 @@
 </head>
 <body>
 
+<div id="wynik"></div>
+
 <script>
 var nr = 25;
-
 var licznik = 0;
+var output = "";
 
 for (var i = nr; i <= nr + 15; i++) {
     var pierw2 = Math.sqrt(i);
     var pierw4 = Math.sqrt(pierw2);
 
-    document.write("I=" + i + " pierw_2(" + i + ")=" + pierw2.toFixed(2) + " pierw_4(" + i + ")=" + pierw4.toFixed(2) + "<br>");
+    output += "I=" + i + 
+              " pierw_2(" + i + ")=" + pierw2.toFixed(2) + 
+              " pierw_4(" + i + ")=" + pierw4.toFixed(2) + "<br>";
 
     licznik++;
 
-    if (licznik % 3 == 0) {
-        document.write("-----<br>");
+    if (licznik % 3 === 0) {
+        output += "-----<br>";
     }
 }
+
+document.getElementById("wynik").innerHTML = output;
 </script>
 
 </body>
