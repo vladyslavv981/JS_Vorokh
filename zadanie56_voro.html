@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Zadanie 56</title>
+<meta charset="utf-8">
+<title>Zadanie 56</title>
 </head>
-<body style="font-family: monospace;">
+<body>
 <pre>
 <script>
-var imie = prompt("Podaj imię:");
-var nazwisko = prompt("Podaj nazwisko:");
-var a = (nazwisko.length % 4) + 5;
-var b = (imie.length % 6) + 20;
-for (var i = 0; i < b; i++) {
+var i_vor = "Vladyslav";
+var b_vor = "Vorokh";
+
+var a = b_vor.length % 4 + 5;
+var b = i_vor.length % 5 + 20;
+
+for (var i = 1; i <= b; i++)
+{
     document.write("*");
 }
 document.write("\n");
 
-var wiersz = "*";
-for (var i = 1; i < b - 1; i++) {
-    wiersz = wiersz + " ";
-}
-wiersz = wiersz.substring(0, b - 1) + "*";
+for (var w = 1; w <= a - 2; w++)
+{
+    document.write("*");
 
-for (var i = 0; i < a - 2; i++) {
-    document.write(wiersz + "\n");
+    for (var j = 1; j <= b - 2; j++)
+    {
+        document.write(" ");
+    }
+    document.write("*\n");
 }
 
-for (var i = 0; i < b; i++) {
+for (var i = 1; i <= b; i++)
+{
     document.write("*");
 }
 </script>
