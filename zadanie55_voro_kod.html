@@ -10,7 +10,9 @@
     <meta charset="UTF-8">
     <title>Zadanie 55</title>
 </head>
-<body>
+<body style="font-family: monospace;">
+
+<pre>
 <script>
 var a_vor = parseInt(prompt("Podaj wysokość (a): "));
 var b_vor = parseInt(prompt("Podaj szerokość (b): "));
@@ -18,20 +20,25 @@ var b_vor = parseInt(prompt("Podaj szerokość (b): "));
 for (var i = 0; i < b_vor; i++) {
     document.write("*");
 }
-document.write("<br>");
+document.write("\n");
+
 var wiersz_vor = "*";
 for (var i = 1; i < (b_vor - 2); i++) {
-    wiersz_vor = wiersz_vor + "&nbsp;&nbsp;";
+    wiersz_vor = wiersz_vor + " ";
 }
 wiersz_vor = wiersz_vor + "*";
+
 for (var i = 0; i < (a_vor - 2); i++) {
     document.write(wiersz_vor);
-    document.write("<br>");
+    document.write("\n");
 }
+
 for (var i = 0; i < b_vor; i++) {
     document.write("*");
 }
 </script>
+</pre>
+
 </body>
 </html>
  </textarea> 
