@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 49</title>
+</head>
+<body>
+<script>
+var a_vor, b_vor, c_vor;
+do
+{
+    a_vor = parseFloat(prompt("Podaj bok a:"));
+    b_vor = parseFloat(prompt("Podaj bok b:"));
+    c_vor = parseFloat(prompt("Podaj bok c:"));
+
+    if (!(a_vor > 0 && b_vor > 0 && c_vor > 0 &&
+          a_vor + b_vor > c_vor &&
+          a_vor + c_vor > b_vor &&
+          b_vor + c_vor > a_vor))
+    {
+        alert("Podane boki nie tworzą trójkąta! Wprowadź dane ponownie.");
+    }
+
+}
+while (!(a_vor > 0 && b_vor > 0 && c_vor > 0 &&
+         a_vor + b_vor > c_vor &&
+         a_vor + c_vor > b_vor &&
+         b_vor + c_vor > a_vor));
+
+document.write("Podane boki tworzą trójkąt.<br>");
+document.write("a = " + a_vor + "<br>");
+document.write("b = " + b_vor + "<br>");
+document.write("c = " + c_vor);
+</script>
+</body>
+</html>
