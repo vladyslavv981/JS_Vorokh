@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 57</title>
+</head>
+<body>
+<h2>Zadanie 57</h2>
+<script>
+
+let imie = "Vladyslav";
+let nazwisko = "Vorokh";
+
+let l1_t_vor, l2_t_vor;
+let pocz_vor;
+let tekst_vor;
+
+do {
+    l1_t_vor = parseInt(prompt("Podaj l1 (20-60):"));
+    if (l1_t_vor < 20 || l1_t_vor > 60) {
+        alert("liczba l1 nie należy do przedziału <20,60>");
+    }
+} while (l1_t_vor < 20 || l1_t_vor > 60);
+do {
+    l2_t_vor = parseInt(prompt("Podaj l2 (20-60):"));
+    if (l2_t_vor < 20 || l2_t_vor > 60) {
+        alert("liczba l2 nie należy do przedziału <20,60>");
+    }
+} while (l2_t_vor < 20 || l2_t_vor > 60);
+pocz_vor = parseInt(prompt("Podaj początkowy rozmiar tekstu:"));
+tekst_vor = prompt("Podaj tekst:");
+let krok = 0;
+if (l1_t_vor < l2_t_vor) {
+    krok = 5;
+} else if (l2_t_vor < l1_t_vor) {
+    krok = -5;
+} else {
+    krok = 0;
+}
+if (krok === 0) {
+    document.write("<p style='font-size:" + pocz_vor + "px;'>" + tekst_vor + "</p>");
+} else {
+    for (let i = pocz_vor; i <= 100 && i >= 0; i += krok) {
+        document.write("<p style='font-size:" + i + "px;'>" + tekst_vor + "</p>");
+    }
+}
+</script>
+</body>
+</html>
