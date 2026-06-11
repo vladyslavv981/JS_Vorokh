@@ -4,31 +4,40 @@
 </head>
    <body> 
      <textarea cols="90" rows="24"> 
-<<!DOCTYPE html>
-<html lang="pl">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Zadanie 55</title>
+<meta charset="utf-8">
+<title>Zadanie 55</title>
 </head>
-<body style="font-family: monospace;">
+<body>
 <pre>
 <script>
-var a_vor = parseInt(prompt("Podaj wysokość (a): "));
-var b_vor = parseInt(prompt("Podaj szerokość (b): "));
-for (var i = 0; i < b_vor; i++) {
+var i_vor = "vor";
+var b_vor = "vla";
+    
+var a = 25;
+var b = 25;
+    
+for (var i = 1; i <= b; i++)
+{
     document.write("*");
 }
 document.write("\n");
 
-var wiersz_vor = "*";
-for (var i = 1; i < b_vor - 1; i++) {
-    wiersz_vor = wiersz_vor + " ";
+for (var w = 1; w <= a - 2; w++)
+{
+    document.write("*");
+
+    for (var j = 1; j <= b - 2; j++)
+    {
+        document.write(" ");
+    }
+    document.write("*\n");
 }
-wiersz_vor = wiersz_vor.substring(0, b_vor - 1) + "*";
-for (var i = 0; i < a_vor - 2; i++) {
-    document.write(wiersz_vor + "\n");
-}
-for (var i = 0; i < b_vor; i++) {
+
+for (var i = 1; i <= b; i++)
+{
     document.write("*");
 }
 </script>
