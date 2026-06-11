@@ -5,37 +5,39 @@
    <body> 
      <textarea cols="90" rows="24"> 
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Zadanie 55</title>
+<meta charset="UTF-8">
+<title>Zadanie 55</title>
 </head>
 <body>
-<script>
-let a_kow = parseInt(prompt("Podaj a:"));
-let b_kow = parseInt(prompt("Podaj b:"));
 
-for (let i = 1; i <= b_kow; i++) {
+<script>
+var a_vor = parseInt(prompt("Podaj a (wysokość):"));
+var b_vor = parseInt(prompt("Podaj b (szerokość):"));
+
+for (var i = 1; i <= b_vor; i++) {
     document.write("*");
 }
 document.write("<br>");
 
-let wiersz_kow = "*";
+var wiersz_vor = "*";
+for (var i = 1; i <= (b_vor - 2); i++) {
+    wiersz_vor = wiersz_vor + "&nbsp&nbsp";
+}
+wiersz_vor = wiersz_vor + "*";
 
-for (let i = 1; i <= (b_kow - 2); i++) {
-    wiersz_kow = wiersz_kow + "&nbsp&nbsp";
+for (var i = 1; i <= (a_vor - 2); i++) {
+    document.write(wiersz_vor);
+    document.write("<br>");
 }
 
-wiersz_kow = wiersz_kow + "*";
-
-for (let i = 1; i <= (a_kow - 2); i++) {
-    document.write(wiersz_kow + "<br>");
-}
-
-for (let i = 1; i <= b_kow; i++) {
+for (var i = 1; i <= b_vor; i++) {
     document.write("*");
 }
+document.write("<br>");
 </script>
+
 </body>
 </html>
  </textarea> 
